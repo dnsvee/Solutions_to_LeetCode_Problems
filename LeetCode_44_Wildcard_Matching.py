@@ -1,6 +1,6 @@
-/*
-https://leetcode.com/problems/wildcard-matching/submissions/
-*/
+#
+# https://leetcode.com/problems/wildcard-matching/submissions/
+#
 
 class Solution:
     def isMatch(self, s: str, p: str) -> bool:
