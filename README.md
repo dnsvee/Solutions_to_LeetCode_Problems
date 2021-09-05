@@ -2,4 +2,4 @@
 
 This repo contains some of my solutions from LeetCode (programming challenges).
 
-(My LeetCode profile)[https://leetcode.com/dnsverzijl/]
+[My LeetCode profile](https://leetcode.com/dnsverzijl/)
