@@ -1,0 +1,27 @@
+# https://leetcode.com/problems/candy/
+class Solution(object):
+    def candy(self, ratings):
+        n = len(ratings)
+
+        # give candy more than the neigbour child if the rank is higher
+        def calcmin(ratings, mratings):
+            mratings[0] = 1
+            for i in range(1, n):
+                if ratings[i - 1] < ratings[i]:
+                    mratings[i] = mratings[i - 1] + 1
+                else:
+                    mratings[i] = 1
+                    
+            return mratings
+                
+        # scan over left neighbours
+        l = calcmin(ratings,       ratings[:])
+        
+        # scan of right neighbours
+        r = calcmin(ratings[::-1], ratings[:])[::-1]
+        
+        # return total candies
+        return sum([max(l[i], r[i]) for i in range(0, n)])
+        
+      
+        
